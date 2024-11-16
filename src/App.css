@@ -1,0 +1,41 @@
+#root {
+  width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.firstComponent{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.leftSideFc{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.watchCv{
+  height: auto;
+  width: 250px;
+  min-width: 80px;
+  margin-top: 5px;
+}
+.rigthSideFc{
+  display: flex;
+  flex-direction: column;
+}
+.rigthSideFc .traductionButton{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.traductionButton{
+  max-width: 170px;
+  height: 40px;
+  font-size: 6px;
+}
+.photo {
+  margin-top: 10px;
+} 
