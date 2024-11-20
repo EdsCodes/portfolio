@@ -1,68 +1,80 @@
-:root {
+#root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 
+  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+/*First component = title, watchCv, translate page and photo*/
+.firstComponent{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: row;
+  align-items: flex-start;
 }
+/* *Fc = firstComponent*/
+.container-fluid .leftSideFc{
+  margin-top: 60px;
+}
+.name{
+  color: #FC8F54;
+}
+.leftSideFc .watchCv{
+  height: auto;
+  width: 250px;
+  min-width: 80px;
+  margin-top: 5px;
+  background-color: #FC8F54;
+  color: black; 
+  font-weight: 600;
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  font-size: 16px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease;  
+}
+.leftSideFc .watchCv:hover {
+  background-color: #80C4E9; 
+}
+.rigthSideFc{
+  display: flex;
+  flex-direction: column;
+}
+.rigthSideFc .traductionButton{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.traductionButton{
+  max-width: 170px;
+  height: 40px;
+  font-size: 6px;
+}
+/*End of first component*/
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/*Second component = About me*/
+.aboutMeContainer .edscodesLogo {
+  margin: auto;
+  width: 400px;
+  height: auto;
+  display: flex;
+  align-content: center;
+} 
+.aboutMeContainer{
+  margin-top: 200px;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.edscodesLogo img{
+  border-radius: 15px;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+/*End of second component*/
