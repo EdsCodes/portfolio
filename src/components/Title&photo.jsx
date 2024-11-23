@@ -4,7 +4,7 @@ function TitlePhoto() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="leftSideFc col-5 d-flex flex-column align-items-start">
+        <div className="leftSideFc col-6 d-flex flex-column align-items-start">
           <h1>Hi,</h1>
           <h2>I'm <span className="name">John Edward Gonzalez</span></h2>
           <h3>Frontend developer</h3>
@@ -12,8 +12,8 @@ function TitlePhoto() {
             Watch CV
           </button>
         </div>
-        <div className="rightSideFc col-7 d-flex flex-column align-items-end">
-          <button type="button" className="traductionButton btn btn-sm-md btn-outline-secondary">
+        <div className="rightSideFc col-6 d-flex flex-column align-items-end">
+          <button type="button" className="traductionButton btn btn-sm-md btn-outline-secondary d-flex flex-column justify-content-end">
             translate
           </button>
           <div className="d-flex justify-content-center mx-auto d-block">

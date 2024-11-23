@@ -17,16 +17,10 @@
 }
 
 /*First component = title, watchCv, translate page and photo*/
-.firstComponent{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-/* *Fc = firstComponent*/
 .container-fluid .leftSideFc{
-  margin-top: 60px;
+  margin-top: 100px;
 }
-.name{
+.leftSideFc .name{
   color: #FC8F54;
 }
 .leftSideFc .watchCv{
@@ -47,15 +41,6 @@
 .leftSideFc .watchCv:hover {
   background-color: #80C4E9; 
 }
-.rigthSideFc{
-  display: flex;
-  flex-direction: column;
-}
-.rigthSideFc .traductionButton{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
 .traductionButton{
   max-width: 170px;
   height: 40px;
@@ -65,14 +50,11 @@
 
 /*Second component = About me*/
 .aboutMeContainer .edscodesLogo {
-  margin: auto;
-  width: 400px;
+  width: 500px;
   height: auto;
-  display: flex;
-  align-content: center;
 } 
-.aboutMeContainer{
-  margin-top: 200px;
+.container-fluid .aboutMeContainer{
+  margin-top: 150px;
 }
 .edscodesLogo img{
   border-radius: 15px;

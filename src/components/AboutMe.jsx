@@ -3,8 +3,8 @@ import logoRecortadoEdsCodes from '../assets/logoRecortadoEdsCodes.jpg'
 function AboutMe() {
     return (
         <div className="container-fluid">
-            <div className="row aboutMeContainer">
-                <div className="edscodesLogo col-5 d-flex flex-column align-items-start">
+            <div className="row aboutMeContainer justify-content-between">
+                <div className="edscodesLogo col-6 d-flex flex-column  align-items-start justify-content-center">
                     <img 
                     src={logoRecortadoEdsCodes} 
                     className="photo img-fluid" 
@@ -12,7 +12,7 @@ function AboutMe() {
                     alt="edsCodesLogo"
                     />
                 </div>
-                <div className="aboutMe col-7 d-flex flex-column align-items-start mt-3 ml-auto">
+                <div className="aboutMe col-6 d-flex flex-column align-items-start mt-3 ml-auto">
                     <h2>About me 👨‍💻</h2>
                     <div className="aboutMeParagraph text-start fs-4 lh-lg">
                         <p>  

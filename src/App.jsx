@@ -1,5 +1,6 @@
 import AboutMe from "./components/AboutMe"
 import TitlePhoto from "./components/title&photo"
+import MySkills from "./components/MySkills"
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div>
         <TitlePhoto />
         <AboutMe />
+        <MySkills />
       </div>
     </div>
   )
