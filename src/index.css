@@ -49,14 +49,21 @@
 /*End of first component*/
 
 /*Second component = About me*/
+.container-fluid .aboutMeContainer{
+  margin-top: 150px;
+}
 .aboutMeContainer .edscodesLogo {
   width: 500px;
   height: auto;
 } 
-.container-fluid .aboutMeContainer{
-  margin-top: 150px;
-}
 .edscodesLogo img{
   border-radius: 15px;
 }
+/*End of second component*/
+
+/*Second component = About me*/
+.MySkillsContainer{
+  margin-top: 150px;
+}
+
 /*End of second component*/
