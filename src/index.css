@@ -52,12 +52,15 @@
 .container-fluid .aboutMeContainer{
   margin-top: 150px;
 }
-.aboutMeContainer .edscodesLogo {
-  width: 500px;
-  height: auto;
-} 
 .edscodesLogo img{
   border-radius: 15px;
+}
+.container-fluid .aboutMeContainer .aboutMe {
+  padding: 15px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #e6e1e1, #ffffff);
+  box-shadow:  9px 9px 18px #e0dcdc,
+              -9px -9px 18px #ffffff;
 }
 /*End of second component*/
 
