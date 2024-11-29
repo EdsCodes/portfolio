@@ -62,88 +62,71 @@
   box-shadow:  9px 9px 18px #e0dcdc,
               -9px -9px 18px #ffffff;
 }
-/*End of second component*/
 
-/*Second component = About me*/
-.MySkillsContainer{
-  margin-top: 150px;
+.interactiveAboutMe {
+  display: flex;
+  align-items: center;
 }
 
 .content {
-  width: 237px;
-  font-size: 36px;
-  line-height: 40px;
-  font-family: 'Muli';
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Muli', sans-serif;
+  position: relative;
   color: #000000;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 21%;
-  margin-top: 160px;
-  margin-left: -127px;
+  gap: 0.5rem;
+}
 
-  &:before {
-    content: '[';
-    position: absolute;
-    left: -30px;
-    line-height: 40px;
-  }
-  &:after {
-    content: ']';
-    position: absolute;
-    right: -30px;
-    line-height: 40px;
-  }
-  &:after, &:before {
-    color: #FC8F54;
-    font-size: 42px;
-    animation: 2s linear 0s normal none infinite opacity;
-  }
+.content:before {
+  content: '[';
+  color: #FC8F54;
+  font-size: 2rem;
+  margin-right: 0.2rem;
+}
+
+.content:after {
+  content: ']';
+  color: #FC8F54;
+  font-size: 2rem;
+  margin-left: 0.2rem;
+}
+
+p.about {
+  margin: 0;
+  line-height: 2rem;
+  font-weight: bold;
 }
 
 .visible {
-  float: left;
-  font-weight: 600;
-  overflow: hidden;
-  height: 40px;
-}
-
-p {
-  display: inline;
-  float: left;
-  margin: 0;
+  overflow: hidden; /* Oculta los elementos fuera de la vista */
+  height: 2rem; /* Define una altura fija para el área visible */
+  display: flex;
+  align-items: center;
 }
 
 ul {
-  margin-top: 0;
-  padding-left: 20px;
-  text-align: left;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  animation: 8s linear 0s normal none infinite change;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: slide 8s linear infinite;
 }
 
 ul li {
-  line-height: 40px;
-  margin: 0;
+  height: 2rem; /* Define una altura consistente */
+  line-height: 2rem; /* Centra verticalmente el texto */
+  text-align: left;
 }
 
-@keyframes opacity {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+@keyframes slide {
+  0%, 20% { transform: translateY(0); } /* Primer elemento visible (Me) */
+  25%, 45% { transform: translateY(-2rem); } /* Segundo elemento visible (John) */
+  50%, 70% { transform: translateY(-4rem); } /* Tercer elemento visible (edsCodes) */
+  75%, 95% { transform: translateY(-2rem); } /* Regresa al segundo (John) */
+  100% { transform: translateY(0); } /* Regresa al primero (Me) */
 }
-
-@keyframes change {
-  0% { margin-top: 0; }
-  15% { margin-top: 0; }
-  25% { margin-top: -40px; }
-  40% { margin-top: -40px; }
-  50% { margin-top: -80px; }
-  65% { margin-top: -80px; }
-  75% { margin-top: -40px; }
-  85% { margin-top: -40px; }
-  100% { margin-top: 0; }
-}
-
 
 /*End of second component*/
