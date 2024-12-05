@@ -13,8 +13,8 @@ function TitlePhoto() {
           <button type="button" className="watchCv btn mt-5">
             Watch CV
           </button>
-          <div className="socials d-flex flex-row align-items-start">
-            <div className="socialImg mr-15px">
+          <div className="socials d-flex flex-row align-items-start mt-4">
+            <div className="socialImg">
               <a href="https://www.linkedin.com/in/johnedscodes/" target="_blank" alt="LinkedIn" rel="noopener noreferrer">
                 <FaLinkedinIn alt="LinkedInLogo" style={{ width: '30px', height: 'auto', color: '#0B0B0B' }}/>
               </a>

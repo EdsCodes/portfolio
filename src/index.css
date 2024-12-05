@@ -17,6 +17,11 @@
 }
 
 /*First component = title, watchCv, translate page and photo*/
+.traductionButton{
+  max-width: 170px;
+  height: 40px;
+  font-size: 6px;
+}
 .container-fluid .leftSideFc{
   margin-top: 100px;
 }
@@ -41,31 +46,36 @@
 .leftSideFc .watchCv:hover {
   background-color: #80C4E9; 
 }
-.traductionButton{
-  max-width: 170px;
-  height: 40px;
-  font-size: 6px;
+.leftSideFc .socials .socialImg {
+  margin-right: 20px;
 }
 /*End of first component*/
 
-/*Second component = About me*/
-.container-fluid .aboutMeContainer{
+/*second component*/
+.container-fluid .aboutMeContainer {
   margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
 }
-.edscodesLogo img{
-  border-radius: 15px;
-}
-.container-fluid .aboutMeContainer .aboutMe {
-  padding: 15px;
+
+.aboutMe {
+  padding: 20px;
   border-radius: 15px;
   background: linear-gradient(145deg, #e6e1e1, #ffffff);
-  box-shadow:  9px 9px 18px #e0dcdc,
-              -9px -9px 18px #ffffff;
+  box-shadow: 9px 9px 18px #e0dcdc, -9px -9px 18px #ffffff;
+}
+
+.edscodesLogo img {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
 }
 
 .interactiveAboutMe {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .content {
@@ -78,55 +88,56 @@
   gap: 0.5rem;
 }
 
-.content:before {
+.content:before, 
+.content:after {
   content: '[';
   color: #FC8F54;
   font-size: 2rem;
-  margin-right: 0.2rem;
+  margin: 0 0.2rem;
 }
 
 .content:after {
   content: ']';
-  color: #FC8F54;
-  font-size: 2rem;
-  margin-left: 0.2rem;
 }
 
 p.about {
   margin: 0;
-  line-height: 2rem;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .visible {
-  overflow: hidden; /* Oculta los elementos fuera de la vista */
-  height: 2rem; /* Define una altura fija para el área visible */
+  overflow: hidden;
+  height: 2rem;
   display: flex;
   align-items: center;
 }
 
-ul {
+.visible ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
-  position: relative;
-  animation: slide 8s linear infinite;
+  animation: slide 9s ease-in-out infinite;
 }
 
-ul li {
-  height: 2rem; /* Define una altura consistente */
-  line-height: 2rem; /* Centra verticalmente el texto */
-  text-align: left;
+.visible ul li {
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
 }
 
 @keyframes slide {
-  0%, 20% { transform: translateY(0); } /* Primer elemento visible (Me) */
-  25%, 45% { transform: translateY(-2rem); } /* Segundo elemento visible (John) */
-  50%, 70% { transform: translateY(-4rem); } /* Tercer elemento visible (edsCodes) */
-  75%, 95% { transform: translateY(-2rem); } /* Regresa al segundo (John) */
-  100% { transform: translateY(0); } /* Regresa al primero (Me) */
+  0% { transform: translateY(0rem); }
+  33% { transform: translateY(-1rem); }
+  66% { transform: translateY(-2rem); }
+  100% { transform: translateY(2rem); }
 }
+/*end of second component*/
 
-/*End of second component*/
+/*Third content*/
+.MySkillsContainer{
+  margin-top: 150px;
+}
+/*end of third content*/
