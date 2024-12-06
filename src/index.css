@@ -136,8 +136,14 @@ p.about {
 }
 /*end of second component*/
 
-/*Third content*/
+/*Third component*/
 .MySkillsContainer{
+  margin-top: 150px;
+}
+/*end of third content*/
+
+/*Fourth component*/
+.MyProjectsContainer{
   margin-top: 150px;
 }
 /*end of third content*/
