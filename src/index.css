@@ -146,4 +146,8 @@ p.about {
 .MyProjectsContainer{
   margin-top: 150px;
 }
+.projectImg a img{
+  width: 300px;
+  height: auto;
+}
 /*end of third content*/
