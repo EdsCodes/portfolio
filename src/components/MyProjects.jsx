@@ -1,5 +1,6 @@
 import imgEcommerceHtmlCssJs from '../assets/imgs/Ecommerce HTML CSS & Js.png'
 import imgEcommerceReact from '../assets/imgs/Ecommerce React.png'
+import imgScholarApp from '../assets/imgs/scholar app image.png'
 
 function MyProjects () {
     return (
@@ -24,7 +25,7 @@ function MyProjects () {
                     <div className="project">
                         <div className="projectImg">
                             <a href="https://proyecto-final-gonzalez-coder.netlify.app/">
-                                <img src={imgEcommerceReact} alt="Vista previa app control escolar" target="_blank" rel="noopener noreferrer"></img>
+                                <img src={imgScholarApp} alt="Vista previa app control escolar" target="_blank" rel="noopener noreferrer"></img>
                             </a>
                         </div>
                         <div className="projectName">

@@ -151,3 +151,87 @@ p.about {
   height: auto;
 }
 /*end of third content*/
+/*start of fifth content*/
+/* Contenedor principal */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Lado del texto */
+.ContactTextside {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Lado del formulario */
+.FormSide {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Formulario */
+.FormSide form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Etiquetas */
+form label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+/* Botón */
+form button {
+  background-color: #fc8f54;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #80c4e9;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ContactTextside,
+  .FormSide {
+    max-width: 100%;
+  }
+}
+
+/*end of fifth content*/
