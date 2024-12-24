@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import myLogo2 from '../assets/edscodesLogo.jpg';
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +10,8 @@ const ContactMe = () => {
     message: "",
   });
 
+  const [isSending, setIsSending] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -16,20 +20,7 @@ const ContactMe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://example.com/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        alert("Failed to send message.");
-      }
+      
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred.");
@@ -54,6 +45,11 @@ const ContactMe = () => {
             Puedes hacerlo a través de mis redes sociales, o a través del siguiente
             formulario de contacto. Responderé lo antes posible. Gracias
             </p>
+            <img
+              src={myLogo2}
+              className="myLogo2 img-fluid rounded mx-auto d-block custom-img"
+              alt="edsCodesLogo"
+            />
         </div>
         <div className="FormSide">
             <form onSubmit={handleSubmit}>

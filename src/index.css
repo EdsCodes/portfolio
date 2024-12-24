@@ -152,7 +152,6 @@ p.about {
 }
 /*end of third content*/
 /*start of fifth content*/
-/* Contenedor principal */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -176,7 +175,12 @@ p.about {
   max-width: 500px;
 }
 
-/* Formulario */
+.myLogo2{
+  max-height: 16em; 
+  width: auto;  
+}
+
+/* Form */
 .FormSide form {
   background-color: #ffffff;
   padding: 20px;
@@ -187,13 +191,14 @@ p.about {
   gap: 1rem;
 }
 
-/* Etiquetas */
+/* Labels */
 form label {
   font-size: 0.9rem;
   color: #555;
+  text-align: left;
 }
 
-/* Campos de entrada */
+/* inputs */
 form input[type="text"],
 form input[type="email"],
 form textarea {
@@ -206,7 +211,7 @@ form textarea {
   background-color: #f7f7f7;
 }
 
-/* Botón */
+/* Button */
 form button {
   background-color: #fc8f54;
   border: none;
@@ -221,7 +226,7 @@ form button:hover {
   background-color: #80c4e9;
 }
 
-/* Responsivo */
+/* Responsive */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
