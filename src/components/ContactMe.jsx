@@ -19,13 +19,31 @@ const ContactMe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
+    setIsSending(true);
       
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred.");
-    }
-  };
+    emailjs
+      .send(
+        'service_xe0zonb',
+        'template_pe4n1zp',
+        formData,
+        '5jXW4CsbGLMOOMVCi' 
+      )
+      .then((response) => {
+        alert('Correo enviado exitosamente.');
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setIsSending(false);
+      })
+      .catch ((error) => {
+        console.error("Error:", error);
+        alert("Ocurrió un error, correo no enviado.");
+        setIsSending(false);
+      });
+  }; 
 
   return (
     <div
@@ -86,13 +104,27 @@ const ContactMe = () => {
                 <label>
                     Mensaje:
                     <textarea
+                    type="text"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     />
                 </label>
-                <button type="submit">Enviar</button>
+                <button
+                  type="submit"
+                  disabled={isSending}
+                  style={{
+                    backgroundColor: isSending ? '#ccc' : '#007BFF',
+                    color: 'white',
+                    padding: '0.5rem 1rem',
+                    border: 'none',
+                    borderRadius: '4px',
+                    cursor: isSending ? 'not-allowed' : 'pointer',
+                  }}
+                >
+                  {isSending ? 'Enviando...' : 'Enviar'}
+                </button>
             </form>
         </div>
     </div>
