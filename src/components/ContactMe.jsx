@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import myLogo2 from '../assets/edscodesLogo.jpg';
 import emailjs from '@emailjs/browser';
+import Swal from "sweetalert2";
 
 const ContactMe = () => {
   const form = useRef();
@@ -38,7 +39,11 @@ const ContactMe = () => {
       )
       .then(
         () => {
-          alert('Correo enviado exitosamente.');
+          Swal.fire({
+            title: 'Correo enviado exitosamente.',
+            text: 'Me pondré en contacto contigo lo mas pronto posible.',
+            icon: 'success',
+          }),
           setFormData({
             name: "",
             email: "",
