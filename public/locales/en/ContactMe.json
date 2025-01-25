@@ -1,0 +1,14 @@
+{
+    "SuccessTitle":"Sent",
+    "SuccessMessage":"The Message has been send correctly",
+    "ErrorTitle":"Error",
+    "ErrorMessage":"An error occurred, the email was not sent.",
+    "ContactMe": "Contact Me",
+    "ContactMeText": "You can do it through my social networks, or through the following contact form. I will respond as soon as possible. Thank you.",
+    "Name": "Name",
+    "Email": "Email",
+    "Subject": "Subject",
+    "Message": "Message",
+    "Sending": "Sending...",
+    "Send": "Send"
+}

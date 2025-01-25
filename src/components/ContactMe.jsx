@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import myLogo2 from '../assets/edscodesLogo.jpg';
 import emailjs from '@emailjs/browser';
 import Swal from "sweetalert2";
+import { useTranslation } from "react-i18next";
 
 const ContactMe = () => {
-  const form = useRef();
+  const { t } = useTranslation('ContactMe'); 
   const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -40,10 +41,10 @@ const ContactMe = () => {
       .then(
         () => {
           Swal.fire({
-            title: 'Correo enviado exitosamente.',
-            text: 'Me pondré en contacto contigo lo mas pronto posible.',
+            title: t('SuccessTitle'),
+            text: t('SuccessMessage'),
             icon: 'success',
-          }),
+          });
           setFormData({
             name: "",
             email: "",
@@ -54,30 +55,21 @@ const ContactMe = () => {
         },
         (error) => {
           console.error("Error:", error);
-          alert("Ocurrió un error, correo no enviado.");
+          Swal.fire({
+            title: t('ErrorTitle'),
+            text: t('ErrorMessage'),
+            icon: 'error',
+          });
           setIsSending(false);
         }
       );
   };
 
   return (
-    <div
-      className="contact-container"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: "2rem",
-        marginTop: "150px",
-      }}
-    >
+    <div className="contact-container mt-5">
       <div className="ContactTextside">
-        <h3>Contactame</h3>
-        <p className="text-start fs-5 lh-lg">
-          Puedes hacerlo a través de mis redes sociales, o a través del siguiente
-          formulario de contacto. Responderé lo antes posible. Gracias
-        </p>
+        <h3>{t('ContactMe')}</h3>
+        <p className="text-start fs-5 lh-lg">{t('ContactMeText')}</p>
         <img
           src={myLogo2}
           className="myLogo2 img-fluid rounded mx-auto d-block custom-img"
@@ -85,59 +77,48 @@ const ContactMe = () => {
         />
       </div>
       <div className="FormSide">
-        <form ref={form} onSubmit={sendEmail}>
-          <label>
-            Nombre:
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Asunto:
-            <input
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Mensaje:
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-          </label>
+        <form onSubmit={sendEmail}>
+          <label htmlFor="name">{t('Name')}</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="email">{t('Email')}</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="subject">{t('Subject')}</label>
+          <input
+            id="subject"
+            type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="message">{t('Message')}</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
           <button
             type="submit"
             disabled={isSending}
-            style={{
-              backgroundColor: isSending ? '#80C4E9' : '#fc8f54',
-              color: 'white',
-              padding: '0.5rem 1rem',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: isSending ? 'not-allowed' : 'pointer',
-            }}
+            className={`submit-btn ${isSending ? 'disabled' : ''}`}
           >
-            {isSending ? 'Enviando...' : 'Enviar'}
+            {isSending ? t('Sending') : t('Send')}
           </button>
         </form>
       </div>

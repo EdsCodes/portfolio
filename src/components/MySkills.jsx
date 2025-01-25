@@ -4,12 +4,14 @@ import { FaJsSquare } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
 import { FaBootstrap } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 function MySkills () {
+    const { t } = useTranslation('MySkills');
     return (
         <div className="MySkillsContainer container-fuid d-flex flex-column">
             <div className="myMainSkillsTittle">
-                <h2 className="skillsTittle mb-5">My main skills</h2>
+                <h2 className="skillsTittle mb-5">{t('MySkills')}</h2>
             </div>
             <div className="row">
                 <div className="skill col-2">

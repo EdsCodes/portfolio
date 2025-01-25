@@ -1,0 +1,14 @@
+{
+    "SuccessTitle":"Enviado",
+    "SuccessMessage":"Mensaje enviado correctamente",
+    "ErrorTitle":"Error",
+    "ErrorMessage":"Mensaje no enviado, verifica por favor",
+    "ContactMe": "Contactame",
+    "ContactMeText": "Puedes hacerlo a través de mis redes sociales, o a través del siguiente formulario de contacto. Responderé lo antes posible. Gracias",
+    "Name": "Nombre",
+    "Email": "Email",
+    "Subject": "Asunto",
+    "Message": "Mensaje",
+    "Sending": "Enviando...",
+    "Send": "Enviar"
+}

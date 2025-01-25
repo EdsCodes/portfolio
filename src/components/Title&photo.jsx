@@ -1,17 +1,22 @@
 import Selfie from '../assets/selfie.png'
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
+import LangSwitch from './ChangeLang';
+import { useTranslation } from 'react-i18next';
 
 function TitlePhoto() {
+  const { t } = useTranslation('Title&photo');
+  
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="leftSideFc col-6 d-flex flex-column align-items-start">
-          <h1>Hi,</h1>
-          <h2>I'm <span className="name">John Edward Gonzalez</span></h2>
+          <p></p>
+          <h1>{t("h1Title&photo")}</h1>
+          <h2>{t("h2Title&photo")}<span className="name">John Edward Gonzalez</span></h2>
           <h3>Frontend developer</h3>
           <button type="button" className="watchCv btn mt-5">
-            Watch CV
+            {t("buttonTitle&photo")}
           </button>
           <div className="socials d-flex flex-row align-items-start mt-4">
             <div className="socialImg">
@@ -27,9 +32,7 @@ function TitlePhoto() {
           </div>
         </div>
         <div className="rightSideFc col-6 d-flex flex-column align-items-end">
-          <button type="button" className="traductionButton btn btn-sm-md btn-outline-secondary d-flex flex-column justify-content-end">
-            translate
-          </button>
+          <LangSwitch />
           <div className="d-flex justify-content-center mx-auto d-block">
             <img 
               src={Selfie} 
