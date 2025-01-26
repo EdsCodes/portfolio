@@ -6,7 +6,7 @@ import { FaSass } from "react-icons/fa";
 import { FaBootstrap } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
-function MySkills () {
+const MySkills = () => {
     const { t } = useTranslation('MySkills');
     return (
         <div className="MySkillsContainer container-fuid d-flex flex-column">

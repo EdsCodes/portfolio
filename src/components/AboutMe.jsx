@@ -1,7 +1,8 @@
 import logoRecortadoEdsCodes from '../assets/logoRecortadoEdsCodes.jpg';
 import { useTranslation } from 'react-i18next';
-20
-function AboutMe() {
+
+
+const AboutMe = () => {
     const { t } = useTranslation('AboutMe');
     return (
         <div className="container-fluid row aboutMeContainer align-items-center">

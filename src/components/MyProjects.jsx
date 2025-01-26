@@ -3,7 +3,7 @@ import imgEcommerceHtmlCssJs from '../assets/imgs/Ecommerce HTML CSS & Js.png'
 import imgEcommerceReact from '../assets/imgs/Ecommerce React.png'
 import imgScholarApp from '../assets/imgs/scholar app image.png'
 
-function MyProjects () {
+const MyProjects = () => {
     const { t } = useTranslation('MyProjects');
     return (
         <div className="MyProjectsContainer container-fuid d-flex flex-column mb-5">

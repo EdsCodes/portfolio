@@ -4,7 +4,7 @@ import { IoLogoGithub } from "react-icons/io";
 import LangSwitch from './ChangeLang';
 import { useTranslation } from 'react-i18next';
 
-function TitlePhoto() {
+const TitlePhoto = () => {
   const { t } = useTranslation('Title&photo');
   
   return (
