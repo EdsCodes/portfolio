@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import imgEcommerceHtmlCssJs from '../assets/imgs/Ecommerce HTML CSS & Js.png'
 import imgEcommerceReact from '../assets/imgs/Ecommerce React.png'
 import imgScholarApp from '../assets/imgs/scholar app image.png'
+import imgCalculadoraReact from '../assets/imgs/Calculadora React.png'
 
 const MyProjects = () => {
     const { t } = useTranslation('MyProjects');
@@ -11,7 +12,7 @@ const MyProjects = () => {
                 <h2 className="projectsTittle mb-5">{t('MyProjects')}</h2>
             </div>
             <div className="row">
-                <div className="skill col-4">
+                <div className="skill col-3">
                     <div className="project">
                         <div className="projectImg">
                             <a href="https://edscodes.github.io/E-Commerce-De-Ropa/index.html">
@@ -23,7 +24,7 @@ const MyProjects = () => {
                         </div>
                     </div>
                 </div>
-                <div className="skill col-4">
+                <div className="skill col-3">
                     <div className="project">
                         <div className="projectImg">
                             <a href="https://proyecto-final-gonzalez-coder.netlify.app/">
@@ -35,7 +36,7 @@ const MyProjects = () => {
                         </div>
                     </div>
                 </div>
-                <div className="skill col-4">
+                <div className="skill col-3">
                     <div className="project">
                         <div className="projectImg">
                             <a href="https://proyecto-final-gonzalez-coder.netlify.app/">
@@ -44,6 +45,18 @@ const MyProjects = () => {
                         </div>
                         <div className="projectName">
                             <h3 className='mt-5 text-center'>E-commerce React Js</h3>
+                        </div>
+                    </div>
+                </div>
+                <div className="skill col-3">
+                    <div className="project">
+                        <div className="projectImg">
+                            <a href="https://calculadorareactbyedscodes.netlify.app/">
+                                <img src={imgCalculadoraReact} alt="Vista previa calculadora React" target="_blank" rel="noopener noreferrer"></img>
+                            </a>
+                        </div>
+                        <div className="projectName">
+                            <h3 className='mt-5 text-center'>Calculadora React Js</h3>
                         </div>
                     </div>
                 </div>
