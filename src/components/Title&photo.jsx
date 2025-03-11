@@ -4,8 +4,18 @@ import { IoLogoGithub } from "react-icons/io";
 import LangSwitch from './ChangeLang';
 import { useTranslation } from 'react-i18next';
 
+const cvLinks = {
+  es: "https://drive.google.com/file/d/1JKy7PURhADM3tzUffOMBKwQaiO9RMFLL/view?usp=drive_link",
+  en: "https://drive.google.com/file/d/1FeyaDYxSxQO74MCc7U6K9-D5g3eBt095/view?usp=drive_link"
+};
+
 const TitlePhoto = () => {
-  const { t } = useTranslation('Title&photo');
+  const { t, i18n } = useTranslation('Title&photo');
+
+  const handleCvClick = () => {
+    const selectedCv = cvLinks[i18n.language] || cvLinks.en;
+    window.open(selectedCv, "_blank");
+  };
   
   return (
     <div className="container-fluid">
@@ -15,7 +25,7 @@ const TitlePhoto = () => {
           <h1>{t("h1Title&photo")}</h1>
           <h2>{t("h2Title&photo")}<span className="name">John Edward Gonzalez</span></h2>
           <h3>Frontend developer</h3>
-          <button type="button" className="watchCv btn mt-5">
+          <button type="button" className="watchCv btn mt-5"onClick={handleCvClick}>
             {t("buttonTitle&photo")}
           </button>
           <div className="socials d-flex flex-row align-items-start mt-4">

@@ -15,24 +15,24 @@ const MyProjects = () => {
                 <div className="skill col-3">
                     <div className="project">
                         <div className="projectImg">
-                            <a href="https://edscodes.github.io/E-Commerce-De-Ropa/index.html">
+                            <a href="https://e-commerce-html-css-js.netlify.app">
                                 <img src={imgEcommerceHtmlCssJs} alt="Vista previa eccomerce con HTML+CSS+JS" target="_blank" rel="noopener noreferrer"></img>
                             </a>
                         </div>
                         <div className="projectName">
-                            <h3 className='mt-5 text-center'>E-commerce HTML+CSS+JS</h3>
+                            <h3 className='mt-5 fs-5 text-center'>E-commerce HTML+CSS+JS</h3>
                         </div>
                     </div>
                 </div>
                 <div className="skill col-3">
                     <div className="project">
                         <div className="projectImg">
-                            <a href="https://proyecto-final-gonzalez-coder.netlify.app/">
+                            <a href="https://">
                                 <img src={imgScholarApp} alt="Vista previa app control escolar" target="_blank" rel="noopener noreferrer"></img>
                             </a>
                         </div>
                         <div className="projectName">
-                            <h3 className='mt-5 text-center'>{t('ProjectName')}</h3>
+                            <h3 className='mt-5 fs-5 text-center'>{t('ProjectName')}</h3>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ const MyProjects = () => {
                             </a>
                         </div>
                         <div className="projectName">
-                            <h3 className='mt-5 text-center'>E-commerce React Js</h3>
+                            <h3 className='mt-5 fs-5 text-center'>E-commerce React Js</h3>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ const MyProjects = () => {
                             </a>
                         </div>
                         <div className="projectName">
-                            <h3 className='mt-5 text-center'>Calculadora React Js</h3>
+                            <h3 className='mt-5 fs-5 text-center'>Calculadora React Js</h3>
                         </div>
                     </div>
                 </div>
