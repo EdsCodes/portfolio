@@ -9,12 +9,12 @@ import { useTranslation } from "react-i18next";
 const MySkills = () => {
     const { t } = useTranslation('MySkills');
     return (
-        <div className="MySkillsContainer container-fuid d-flex flex-column">
+        <div className="MySkillsContainer container-fuid d-flex flex-column mb-5">
             <div className="myMainSkillsTittle">
                 <h2 className="skillsTittle mb-5">{t('MySkills')}</h2>
             </div>
-            <div className="row">
-                <div className="skill col-2">
+            <div className="row justify-content-center align-items-center mb-5 mt-5">
+                <div className="skill col-3">
                     <div className="photoNameSkill">
                         <div className="skillImg">
                             <FaReact size={150} color="#61DAFB" />
@@ -24,7 +24,7 @@ const MySkills = () => {
                         </div>
                     </div>
                 </div>
-                <div className="skill col-2">
+                <div className="skill col-3">
                     <div className="photoNameSkill">
                         <div className="skillImg">
                             <FaAngular size={150} color="#bd002e" />
@@ -34,7 +34,7 @@ const MySkills = () => {
                         </div>
                     </div>
                 </div>
-                <div className="skill col-2">
+                <div className="skill col-3">
                     <div className="photoNameSkill">
                         <div className="skillImg">
                             <FaJsSquare size={150} color="#f0dc4e" />
@@ -44,7 +44,7 @@ const MySkills = () => {
                         </div>
                     </div>
                 </div>
-                <div className="skill col-2">
+                <div className="skill col-3">
                     <div className="photoNameSkill">
                         <div className="skillImg">
                             <FaGitAlt size={150} color="#f34f29" />
@@ -54,7 +54,7 @@ const MySkills = () => {
                         </div>
                     </div>
                 </div>
-                <div className="skill col-2">
+                <div className="skill col-3">
                     <div className="photoNameSkill">
                         <div className="skillImg">
                             <FaSass size={150} color="#cd669a" />
@@ -64,7 +64,7 @@ const MySkills = () => {
                         </div>
                     </div>
                 </div>
-                <div className="skill col-2">
+                <div className="skill col-3">
                     <div className="photoNameSkill">
                         <div className="skillImg">
                             <FaBootstrap  size={150} color="#7a09f7" />

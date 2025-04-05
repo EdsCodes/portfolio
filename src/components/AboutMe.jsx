@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const AboutMe = () => {
     const { t } = useTranslation('AboutMe');
     return (
-        <div className="container-fluid row aboutMeContainer align-items-center">
+        <div className="container-fluid row aboutMeContainer align-items-center mb-5">
             <div className="aboutMe col-12 col-md-6 d-flex justify-content-start">
                 <div className="aboutMeParagraph text-start fs-5 lh-lg d-flex flex-column align-items-center text-center">
                     <h2 className="interactiveAboutMe position-relative">

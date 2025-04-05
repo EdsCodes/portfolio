@@ -66,7 +66,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="contact-container mt-5">
+    <div className="contact-container">
       <div className="ContactTextside">
         <h3>{t('ContactMe')}</h3>
         <p className="text-start fs-5 lh-lg">{t('ContactMeText')}</p>
